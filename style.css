@@ -1,0 +1,68 @@
+:root {
+  --duck-yellow: #ffeb3b;
+  --duck-beak: #ff9800;
+  --block-size: 40px;
+}
+
+.minecraft-duck {
+  position: relative;
+  width: var(--block-size);
+  height: var(--block-size);
+  transform-style: preserve-3d;
+  transform: rotateX(-20deg) rotateY(-30deg);
+  margin: 100px;
+}
+
+/* Base Body - Square Cube */
+.body {
+  position: absolute;
+  width: var(--block-size);
+  height: var(--block-size);
+  background-color: var(--duck-yellow);
+  transform-style: preserve-3d;
+  transform: translateZ(calc(var(--block-size) * -0.5));
+}
+
+/* Head - Smaller Cube */
+.head {
+  position: absolute;
+  width: calc(var(--block-size) * 0.8);
+  height: calc(var(--block-size) * 0.8);
+  background-color: var(--duck-yellow);
+  top: calc(var(--block-size) * -0.5);
+  left: calc(var(--block-size) * 0.1);
+  transform-style: preserve-3d;
+  transform: translateZ(calc(var(--block-size) * 0.5));
+}
+
+/* Beak */
+.beak {
+  position: absolute;
+  width: calc(var(--block-size) * 0.4);
+  height: calc(var(--block-size) * 0.3);
+  background-color: var(--duck-beak);
+  top: calc(var(--block-size) * 0.3);
+  left: calc(var(--block-size) * 0.2);
+  transform: translateZ(calc(var(--block-size) * 0.4));
+}
+
+/* Eyes */
+.eye {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: #000;
+  top: 8px;
+  left: 6px;
+  transform: translateZ(1px);
+}
+
+.eye.right {
+  left: auto;
+  right: 6px;
+}
+
+/* Basic 3D shading effect */
+.body, .head, .beak {
+  border: 1px solid rgba(0,0,0,0.1);
+}
