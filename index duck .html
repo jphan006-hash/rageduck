@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    /* Container to center the duck */
+    .scene {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #70a1ff; /* Sky color */
+    }
+
+    /* Main body construction */
+    .duck {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background-color: #fbc531; /* Yellow body */
+        border: 2px solid #e1b12c;
+    }
+
+    /* Head */
+    .duck::before {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-color: #fbc531;
+        top: -20px;
+        left: 20px;
+        border: 2px solid #e1b12c;
+    }
+
+    /* Eye */
+    .duck::after {
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        background-color: #000;
+        top: -10px;
+        left: 40px;
+        box-shadow: 10px 0 0 #000; /* Extra pixel for styling */
+    }
+
+    /* Beak */
+    .beak {
+        position: absolute;
+        width: 15px;
+        height: 10px;
+        background-color: #e84118; /* Orange */
+        top: -5px;
+        left: 50px;
+        border: 2px solid #c23616;
+    }
+</style>
+</head>
+<body>
+    <div class="scene">
+        <div class="duck">
+            <div class="beak"></div>
+        </div>
+    </div>
+</body>
+</html>
